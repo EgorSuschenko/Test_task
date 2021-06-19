@@ -1,0 +1,70 @@
+*{
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: honeydew;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+form {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+  padding: 0 65rem;
+}
+
+
+.flex {
+  margin: 1rem auto;
+  width: 50rem;
+}
+
+.input__file {
+  font-size: 1.6rem;
+  margin: 0.5rem;
+}
+
+.input__file::file-selector-button{
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 3rem;
+  background-color: rgb(233, 150, 122);
+}
+
+.btn {
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 3rem;
+  background-color: rgb(233, 150, 122);
+  margin: 0.5rem;
+}
+
+.btn:hover, .input__file::file-selector-button:hover{
+  cursor: pointer;
+  box-shadow: 0.1rem 0.1rem rgba(119, 75, 61, 0.4),
+  -0.2rem -0.2rem  rgba(119, 75, 61, 0.4) ;
+}

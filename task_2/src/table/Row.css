@@ -1,0 +1,39 @@
+*{
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.row__holder {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-areas: "a b c d e f g";
+}
+
+.column {
+  font-size: 1.6rem;
+  border: 0.1rem black solid;
+  background-color: rgba(4, 43, 31, 0.4);
+}
+
+.balance{
+  grid-area: a;
+}
+.income_active{
+  grid-area: b;
+}
+.income_passive{
+  grid-area: c;
+}
+.transaction_debit{
+  grid-area: d;
+}
+.transaction_credit{
+  grid-area: e;
+}
+.outcome_active{
+  grid-area: f;
+}
+.outcome_passive{
+  grid-area: g;
+}

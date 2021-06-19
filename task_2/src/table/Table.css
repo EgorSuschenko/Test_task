@@ -1,0 +1,72 @@
+*{
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.table__holder{
+  width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.table__header p{
+  font-size: 2rem;
+  width: 1280px;
+}
+
+.column__names{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-areas: "a b b d d c c"
+  "a e f g h i j";
+
+}
+
+.column__names div {
+  font-size: 1.6rem;
+  border: 0.1rem black solid;
+  background-color: rgba(4, 43, 31, 0.4);
+}
+
+.balance {
+  grid-area: a;
+  padding: 1rem;
+  /* grid-row-start: ; */
+}
+
+.in{
+  grid-area: b;
+}
+
+.out{
+  grid-area: c;
+}
+
+.transact{
+  grid-area: d;
+}
+
+.active{
+  grid-area: e;
+}
+
+.passive{
+  grid-area: f;
+}
+
+.debit{
+  grid-area: g;
+}
+
+.credit{
+  grid-area: h;
+}
+
+.active__t{
+  grid-area: i;
+}
+
+.passive__t{
+  grid-area: j;
+}
