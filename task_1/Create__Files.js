@@ -40,6 +40,7 @@ let createFile = (name) => {
   fs.writeFileSync(`${name}.txt`, res);
 }
 
+// Цикл для создания 100 файлов
 for (let i = 0; i < 100; i++) {
   createFile(`file_${i}`);
   console.log(`Created file_${i}.txt`);
