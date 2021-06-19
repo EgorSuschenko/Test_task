@@ -59,7 +59,7 @@ const String = sequelize.define('tables', {     //создание макета 
 // Функция для заполнения бд. fileName - имя файлов, filesQuantity - их количество.
 // К сожалению загрузка получилась довольно долго, а при попытке загрузить более 10 файлов
 // Происходит переполнение памяти и программа завершается с ошибкой
-modules.export.fillDB = (fileName, filesQuantity) => {
+let fillDB = (fileName, filesQuantity) => {
   String.sync()         // Синхронизация с таблицей, созданной в бд (если её нету создаётся автоматически)
   .then(res => {
     console.log('synced');
@@ -92,6 +92,9 @@ modules.export.fillDB = (fileName, filesQuantity) => {
       }
     }
   })
+  .then((res) => {
+
+  })
   .catch(err => {
     console.log(err);
   });
@@ -99,10 +102,10 @@ modules.export.fillDB = (fileName, filesQuantity) => {
 
 
 // Функция суммы целых чисел через sql-запрос
-modules.export.integerSum = () => {
+let integerSum = () => {
   pool.query('select sum(num) from tables')
   .then(( [ res ] ) => {
-    console.log(res[0]['sum(num)']);
+    console.log(`Сумма целых чисел: ${res[0]['sum(num)']}`);
   })
   .then(() => {
     pool.end();
@@ -114,7 +117,7 @@ modules.export.integerSum = () => {
 
 
 // Функция медианы для дробных чисел
-modules.export.median = () => {
+let median = () => {
   pool.query('select part from tables')
     .then(res => {
       let median;
@@ -125,7 +128,7 @@ modules.export.median = () => {
       } else {
         median = sortedPart[Math.floor(halfLength) + 1]
       }
-      console.log(median);
+      console.log(`Медиана дробных чисел: ${median}`);
     })
     .then(() => {
       pool.end();
@@ -135,6 +138,6 @@ modules.export.median = () => {
     })
 }
 
-fillDB('file_', 10);
+// fillDB('file_', 10);
 integerSum();
 median();
